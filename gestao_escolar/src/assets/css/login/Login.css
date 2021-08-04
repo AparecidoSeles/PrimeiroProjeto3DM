@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box
+}
+
+:root{
+    --font-special: normal normal normal 64px 'Poppins', sans-serif; 
+    --font-title: normal normal normal 36px 'Poppins', sans-serif; 
+    --font-subtitle: normal normal normal 18px 'Poppins', sans-serif; 
+    --font-regular: normal normal normal 24px 'Poppins', sans-serif; 
+    --font-regular-medium: normal normal 500 24px 'Poppins', sans-serif; 
+    --font-input: normal normal 500 22px 'Poppins', sans-serif; 
+    --font-input-small: normal normal 500 18px 'Poppins', sans-serif; 
+    --font-list: normal normal normal 20px 'Poppins', sans-serif;
+    --background-color: rgba(196, 196, 196, 0.15);
+    --border: 1px solid rgba(0, 0, 0, 0.25);
+    --primary-color:rgba(237, 31, 36, 1);
+
+}
+
+.main-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Ilustração - Ínicio */
+
+.ilustration-section{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+.ilustration-section figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ilustration-section figure img{
+    width: 100%;
+}
+
+/* ilustração - Fim */
+
+
+.form-section{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.form-figure img{
+    width: 100%;
+}
+
+.form-form{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-input{
+    width: 500px;
+    height: 75px;
+    border-radius: 15px;
+    border: var(--border);
+    font: var(--font-input);
+    text-align: center;
+}
+
+.form-input:focus{
+    outline: none;
+}
+
+.input-email{
+    background-image: url('../../icons//login-person.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 25px;
+}
+
+.input-senha{
+    background-image: url('../../icons//login-lock.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 25px;
+}
+
+.form-button{
+    width: 500px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    font: var(--font-regular-medium);
+    color: white;
+}
+
+.form-button:hover{
+    cursor: pointer;
+}
+
+.form-error{
+    font:var(--font-input);
+    color: red;
+}
+
+@media screen and (max-width: 1440px) {
+    .form-input{
+        width: 400px;
+        font: var(--font-input-small);
+    }
+    .form-button{
+        width: 400px;
+        font-size: 20px;
+    }
+    .ilustration-section figure img{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    .ilustration-section{
+        display: none;
+    }
+    .main-content{
+        justify-content: center;
+        align-items: center;
+    }
+    .form-figure img{
+        width: 392px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .main-content{
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .form-figure img{
+        width: 300px;
+    }
+    .form-input{
+        width: 350px;
+        font: var(--font-input-small);
+    }
+    .form-button{
+        width: 350px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .form-figure img{
+        width: 280px;
+    }
+    .form-input{
+        width: 280px;
+        font: var(--font-input-small);
+        background-image: none;
+    }
+    .form-button{
+        width: 280px;
+        font-size: 20px;
+    }
+}

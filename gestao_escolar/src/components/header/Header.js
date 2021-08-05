@@ -22,7 +22,7 @@ class Header extends Component{
                 <ul>
                     <li><a href='/home'>Ínicio</a></li>
                     <li><a href='/classroom'>Sala</a></li>
-                    <li><a href='/equipamento'>Equipamento</a></li>
+                    <li><a href='/equipment'>Equipamento</a></li>
                     <p className='user-name'>Olá, <span>{this.state.userName}</span>!</p>
                 </ul>
                 <figure className='menu-icon'>

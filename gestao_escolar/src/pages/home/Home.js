@@ -7,6 +7,10 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            salas: '',
+            equipamentos: '',
+            listaSalas: [],
+            listaEquipamentos: []
         }
     }
 
@@ -24,11 +28,11 @@ class Home extends Component {
                         <section className='home-section'>
                             <div className='home-card'>
                                 <header><h1>Salas</h1></header>
-                                <span>5</span>
+                                <span>{this.state.listaSalas.length}</span>
                             </div>
                             <div className='home-card'>
                                 <header><h1>Equipamentos</h1></header>
-                                <span>3</span>
+                                <span>{this.state.listaEquipamentos.length}</span>
                             </div>
                         </section>
                     </main>

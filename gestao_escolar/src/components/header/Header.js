@@ -1,4 +1,4 @@
-import { Children, Component } from 'react';
+import { Component } from 'react';
 import'../../assets/css/components/header/Header.css';
 import logo from '../../assets/images/nav-bar-logo.png';
 import menu from '../../assets/icons/menu.svg'
@@ -21,7 +21,7 @@ class Header extends Component{
                 </figure>
                 <ul>
                     <li><a href='/home'>Ínicio</a></li>
-                    <li><a href='/sala'>Sala</a></li>
+                    <li><a href='/classroom'>Sala</a></li>
                     <li><a href='/equipamento'>Equipamento</a></li>
                     <p className='user-name'>Olá, <span>{this.state.userName}</span>!</p>
                 </ul>

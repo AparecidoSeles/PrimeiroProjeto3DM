@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kemilly Ferreira\\Desktop\\PrimeiroProjeto3DM\\Back-End\\projetoInicial.webApi\\Projeto.Inicial\\Projeto.Incial.csproj": {}
+    "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kemilly Ferreira\\Desktop\\PrimeiroProjeto3DM\\Back-End\\projetoInicial.webApi\\Projeto.Inicial\\Projeto.Incial.csproj": {
+    "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kemilly Ferreira\\Desktop\\PrimeiroProjeto3DM\\Back-End\\projetoInicial.webApi\\Projeto.Inicial\\Projeto.Incial.csproj",
+        "projectUniqueName": "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj",
         "projectName": "Projeto.Incial",
-        "projectPath": "C:\\Users\\Kemilly Ferreira\\Desktop\\PrimeiroProjeto3DM\\Back-End\\projetoInicial.webApi\\Projeto.Inicial\\Projeto.Incial.csproj",
-        "packagesPath": "C:\\Users\\Kemilly Ferreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kemilly Ferreira\\Desktop\\PrimeiroProjeto3DM\\Back-End\\projetoInicial.webApi\\Projeto.Inicial\\obj\\",
+        "projectPath": "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj",
+        "packagesPath": "C:\\Users\\50359605877\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kemilly Ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\50359605877\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

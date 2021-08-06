@@ -9,12 +9,12 @@ class Equipment extends Component {
         super(props);
         this.state = {
             listaEquipamentos: [],
-            marca: '',
-            patrimonio: '',
-            serie: '',
-            tipo: '',
+            marca: 'Sei lá',
+            patrimonio: '2102012',
+            serie: '3123213',
+            tipo: 'Tbm não sei',
             ativo: true,
-            descricao: ''
+            descricao: 'asdasdasda'
 
         }
     }
@@ -71,24 +71,44 @@ class Equipment extends Component {
                                 <h1>Listagem dos equipamentos</h1>
                                 <ul className='equip-list-content'>
                                     <li className='equip-list-li'>
-                                        <div className='equip-list-name'>
-                                            <p>{this.state.name}</p>
+                                    <div className='equip-list-div'>
+                                        <div className='equip-list-marca'>
+                                            <p>{this.state.marca}</p>
                                         </div>
-                                        <div className='equip-list-floor'>
-                                            <p>{this.state.floor}</p>
+                                        <div className='equip-list-serie'>
+                                            <p>{this.state.serie}</p>
                                         </div>
-                                        <div className='equip-list-m2' >
-                                            <p>{this.state.m2}</p>
+                                        <div className='equip-list-patrimonio' >
+                                            <p>{this.state.patrimonio}</p>
                                         </div>
                                         <div className='equip-list-icons' >
                                             <figure>
                                                 <img src={editIcon} alt='Ícone de edição' />
                                             </figure>
+
+                                        </div>
+                                    </div>
+                                    <div className='equip-list-line'></div>
+                                    
+                                    <div className='equip-list-div'>
+                                        <div className='equip-list-descricao'>
+                                            <p>{this.state.descricao}</p>
+                                        </div>
+                                        <div className='equip-list-tipo'>
+                                            <p>{this.state.tipo}</p>
+                                        </div>
+                                        <div className='equip-list-ativo' >
+                                            <p>{this.state.ativo === true? 'Ativo': 'Inativo'}</p>
+                                        </div>
+                                        <div className='equip-list-icons' >
+
                                             <figure>
                                                 <img src={deleteIcon} alt='Ícone de exclusão' />
                                             </figure>
                                         </div>
+                                    </div>
                                     </li>
+  
                                 </ul>
                             </div>
                         </section>

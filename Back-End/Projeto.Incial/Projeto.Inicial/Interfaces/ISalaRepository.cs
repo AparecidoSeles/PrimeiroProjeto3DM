@@ -32,5 +32,12 @@ namespace projeto.inicial.webApi.Interfaces
         /// </summary>
         /// <param name="id"> id da sala que sera deletada </param>
         void Deletar(int id);
+
+        /// <summary>
+        /// Busca uma sala pelo id
+        /// </summary>
+        /// <param name="id"> id da sala que sera buscada </param>
+        /// <returns> uma sala </returns>
+        Sala BuscarPorId(int id);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto.Incial.Interfaces
 {
-    interface ITipoEquipamento
+    interface ITipoEquipamentoRepository
     {
         /// <summary>
         /// lista todos os tipos de equipamentos existentes
@@ -33,5 +33,11 @@ namespace Projeto.Incial.Interfaces
         /// <param name="id"> id do tipo de equipamento que será deletado </param>
         void Deletar(int id);
 
+        /// <summary>
+        /// busca um tipo de equipamento pelo id
+        /// </summary>
+        /// <param name="id"> id do equipamento que sera buscado </param>
+        /// <returns>um tipo de equipamento</returns>
+        TipoEquipamento BuscarPorId(int id);
     }
 }

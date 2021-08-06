@@ -32,5 +32,12 @@ namespace projeto.inicial.webApi.Interfaces
         /// </summary>
         /// <param name="id"> id do equipamento que sera deletado </param>
         void Deletar(int id);
+
+        /// <summary>
+        /// busca um equipamento pelo id
+        /// </summary>
+        /// <param name="id"> id do equipamento que sera buscado </param>
+        /// <returns> um equipamento </returns>
+        Equipamento BuscarPorId(int id);
     }
 }

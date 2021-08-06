@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using projeto.inicial.webApi.Interfaces;
-using Projeto.Incial.Repositories;
-using Projeto.Inicial.Domains;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +10,13 @@ namespace Projeto.Incial.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class SalasController : ControllerBase
+    public class EquipamentoController : ControllerBase
     {
+        private IEquipamentoRepository _equipamentoRepository { get; set; }
 
-        private ISalaRepository _salaRepository { get; set; }
-
-        public SalasController()
+        public EquipamentoController()
         {
-            _salaRepository = new SalaRepository();
+            _equipamentoRepository = new EquipamentoRepository();
         }
 
         [HttpGet]
@@ -28,7 +24,7 @@ namespace Projeto.Incial.Controllers
         {
             try
             {
-                return Ok(_salaRepository.Listar());
+                return Ok(_equipamentoRepository.Listar());
             }
 
             catch (Exception erro)
@@ -38,11 +34,11 @@ namespace Projeto.Incial.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Sala novaSala)
+        public IActionResult Post(Equipamento novoEquipamento)
         {
             try
             {
-                _salaRepository.Cadastrar(novaSala);
+                _equipamentoRepository.Cadastrar(novoEquipamento);
 
                 return StatusCode(200);
             }
@@ -54,11 +50,11 @@ namespace Projeto.Incial.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Sala SalaAtualizada)
+        public IActionResult Put(int id, Equipamento EquipamentoAtualizado)
         {
             try
             {
-                _salaRepository.Atualizar(id, SalaAtualizada);
+                _equipamentoRepository.Atualizar(id, EquipamentoAtualizado);
 
                 return StatusCode(200);
             }
@@ -74,7 +70,7 @@ namespace Projeto.Incial.Controllers
         {
             try
             {
-                _salaRepository.Deletar(id);
+                _equipamentoRepository.Deletar(id);
 
                 return StatusCode(201);
             }
@@ -83,5 +79,6 @@ namespace Projeto.Incial.Controllers
                 return BadRequest(erro);
             }
         }
+
     }
 }

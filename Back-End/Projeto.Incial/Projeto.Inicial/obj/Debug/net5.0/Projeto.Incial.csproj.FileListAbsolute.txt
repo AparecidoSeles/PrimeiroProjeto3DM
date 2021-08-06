@@ -1,0 +1,7 @@
+C:\Users\50359605877\Desktop\PrimeiroProjeto3DM\Back-End\Projeto.Incial\Projeto.Inicial\obj\Debug\net5.0\Projeto.Incial.csproj.AssemblyReference.cache
+C:\Users\50359605877\Desktop\PrimeiroProjeto3DM\Back-End\Projeto.Incial\Projeto.Inicial\obj\Debug\net5.0\Projeto.Incial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\50359605877\Desktop\PrimeiroProjeto3DM\Back-End\Projeto.Incial\Projeto.Inicial\obj\Debug\net5.0\Projeto.Incial.AssemblyInfoInputs.cache
+C:\Users\50359605877\Desktop\PrimeiroProjeto3DM\Back-End\Projeto.Incial\Projeto.Inicial\obj\Debug\net5.0\Projeto.Incial.AssemblyInfo.cs
+C:\Users\50359605877\Desktop\PrimeiroProjeto3DM\Back-End\Projeto.Incial\Projeto.Inicial\obj\Debug\net5.0\Projeto.Incial.csproj.CoreCompileInputs.cache
+C:\Users\50359605877\Desktop\PrimeiroProjeto3DM\Back-End\Projeto.Incial\Projeto.Inicial\obj\Debug\net5.0\Projeto.Incial.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\50359605877\Desktop\PrimeiroProjeto3DM\Back-End\Projeto.Incial\Projeto.Inicial\obj\Debug\net5.0\Projeto.Incial.MvcApplicationPartsAssemblyInfo.cache

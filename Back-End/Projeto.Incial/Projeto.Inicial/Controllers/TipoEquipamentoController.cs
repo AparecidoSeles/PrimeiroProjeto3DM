@@ -13,11 +13,11 @@ namespace Projeto.Incial.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class TipoEquipamentosController : ControllerBase
+    public class TipoEquipamentoController : ControllerBase
     {
         private ITipoEquipamentoRepository _equipamentoRepository { get; set; }
 
-        public TipoEquipamentosController()
+        public TipoEquipamentoController()
         {
             _equipamentoRepository = new TipoEquipamentoRepository();
         }
@@ -53,11 +53,11 @@ namespace Projeto.Incial.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Equipamento TipoEquipamentoAtualizado)
+        public IActionResult Put(int id, TipoEquipamento tipoEquipamentoAtualizado)
         {
             try
             {
-                _equipamentoRepository.Atualizar(id, TipoEquipamentoAtualizado);
+                _equipamentoRepository.Atualizar(id, tipoEquipamentoAtualizado);
 
                 return StatusCode(200);
             }

@@ -13,15 +13,14 @@ namespace Projeto.Incial.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class EquipamentosController : ControllerBase
+    public class SalaController : ControllerBase
     {
-       
-        
-        private IEquipamentoRepository _equipamentoRepository { get; set; }
 
-        public EquipamentosController()
+        private ISalaRepository _salaRepository { get; set; }
+
+        public SalasController()
         {
-            _equipamentoRepository = new EquipamentoRepository();
+            _salaRepository = new SalaRepository();
         }
 
         [HttpGet]
@@ -29,7 +28,7 @@ namespace Projeto.Incial.Controllers
         {
             try
             {
-                return Ok(_equipamentoRepository.Listar());
+                return Ok(_salaRepository.Listar());
             }
 
             catch (Exception erro)
@@ -39,11 +38,11 @@ namespace Projeto.Incial.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Equipamento novoEquipamento)
+        public IActionResult Post(Sala novaSala)
         {
             try
             {
-                _equipamentoRepository.Cadastrar(novoEquipamento);
+                _salaRepository.Cadastrar(novaSala);
 
                 return StatusCode(200);
             }
@@ -55,19 +54,19 @@ namespace Projeto.Incial.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Equipamento EquipamentoAtualizado)
+        public IActionResult Put(int id, Sala SalaAtualizada)
         {
             try
             {
-                _equipamentoRepository.Atualizar(id, EquipamentoAtualizado);
+                _salaRepository.Atualizar(id, SalaAtualizada);
 
-            return StatusCode(200);
+                return StatusCode(200);
             }
 
-            catch(Exception erro)
-        {
-            return BadRequest(erro);
-        }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
 
         }
         [HttpDelete("{id}")]
@@ -75,15 +74,14 @@ namespace Projeto.Incial.Controllers
         {
             try
             {
-                _equipamentoRepository.Deletar(id);
+                _salaRepository.Deletar(id);
 
                 return StatusCode(201);
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 return BadRequest(erro);
             }
         }
-            
     }
 }

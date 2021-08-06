@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using projeto.inicial.webApi.Interfaces;
 using Projeto.Incial.Repositories;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Projeto.Incial.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]

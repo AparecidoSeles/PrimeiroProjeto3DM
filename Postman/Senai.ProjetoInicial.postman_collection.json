@@ -11,6 +11,16 @@
 				{
 					"name": "GET",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvQHBhdWxvLmNvbSIsImp0aSI6IjEiLCJuYW1lIjoiUGF1bG8iLCJleHAiOjE2MjgyNzk0NDYsImlzcyI6IlByb2pldG8uSW5jaWFsIiwiYXVkIjoiUHJvamV0by5JbmNpYWwifQ.-mckHzx08uIWRJCi28nXYvMb3cKSFF3S2dUM8cU8gDQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -116,6 +126,16 @@
 				{
 					"name": "GET",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvQHBhdWxvLmNvbSIsImp0aSI6IjEiLCJuYW1lIjoiUGF1bG8iLCJleHAiOjE2MjgyNzk0NDYsImlzcyI6IlByb2pldG8uSW5jaWFsIiwiYXVkIjoiUHJvamV0by5JbmNpYWwifQ.-mckHzx08uIWRJCi28nXYvMb3cKSFF3S2dUM8cU8gDQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -221,6 +241,16 @@
 				{
 					"name": "GET",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvQHBhdWxvLmNvbSIsImp0aSI6IjEiLCJuYW1lIjoiUGF1bG8iLCJleHAiOjE2MjgyNzk0NDYsImlzcyI6IlByb2pldG8uSW5jaWFsIiwiYXVkIjoiUHJvamV0by5JbmNpYWwifQ.-mckHzx08uIWRJCi28nXYvMb3cKSFF3S2dUM8cU8gDQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -313,6 +343,40 @@
 								"api",
 								"Sala",
 								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"paulo@paulo.com\",\r\n    \"senha\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
 							]
 						}
 					},

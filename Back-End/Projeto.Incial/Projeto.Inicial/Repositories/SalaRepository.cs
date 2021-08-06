@@ -12,6 +12,11 @@ namespace Projeto.Incial.Repositories
     {
         BlogContext ctx = new BlogContext();
 
+        /// <summary>
+        /// atualiza as informações de cada coluna da tabela Sala
+        /// </summary>
+        /// <param name="id"> id da sala que terá a atualização</param>
+        /// <param name="SalaAtualizada"> novo objeto atualizado </param>
         public void Atualizar(int id, Sala SalaAtualizada)
         {
             Sala salaBuscada = BuscarPorId(id);
@@ -49,6 +54,10 @@ namespace Projeto.Incial.Repositories
             return ctx.Salas.FirstOrDefault(s => s.IdSala == id);
         }
 
+        /// <summary>
+        /// cadastra uma sala nova e salva no banco
+        /// </summary>
+        /// <param name="novaSala"> novo objeto cadastrado </param>
         public void Cadastrar(Sala novaSala)
         {
             ctx.Salas.Add(novaSala);
@@ -56,6 +65,10 @@ namespace Projeto.Incial.Repositories
             ctx.SaveChanges();
         }
 
+        /// <summary>
+        /// dela uma sala existente e salva no banco
+        /// </summary>
+        /// <param name="id"> id da sala que será deletada </param>
         public void Deletar(int id)
         {
             ctx.Salas.Remove(BuscarPorId(id));
@@ -63,6 +76,10 @@ namespace Projeto.Incial.Repositories
             ctx.SaveChanges();
         }
 
+        /// <summary>
+        /// lista todas as salas existentes
+        /// </summary>
+        /// <returns> uma lista com todas as salas </returns>
         public List<Sala> Listar()
         {
             return ctx.Salas.ToList();       

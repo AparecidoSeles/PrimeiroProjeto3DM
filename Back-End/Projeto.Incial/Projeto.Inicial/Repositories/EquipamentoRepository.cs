@@ -13,6 +13,11 @@ namespace Projeto.Incial.Repositories
 
         BlogContext ctx = new BlogContext();
 
+        /// <summary>
+        /// atualiza as informações de cada coluna da tabela equipamento
+        /// </summary>
+        /// <param name="id"> id do equipamento que será atualizado </param>
+        /// <param name="equipamentoAtualizado"> objeto com a nova informação </param>
         public void Atualizar(int id, Equipamento equipamentoAtualizado)
         {
             Equipamento equipamentoBuscado = BuscarPorId(id);
@@ -77,6 +82,10 @@ namespace Projeto.Incial.Repositories
             return ctx.Equipamentos.FirstOrDefault(e => e.IdEquipamento == id);
         }
 
+        /// <summary>
+        /// cadastra um novo equipamento e salva as informações no banco
+        /// </summary>
+        /// <param name="novoEquipamento"> novo objeto cadastrado </param>
         public void Cadastrar(Equipamento novoEquipamento)
         {
             ctx.Equipamentos.Add(novoEquipamento);
@@ -84,6 +93,10 @@ namespace Projeto.Incial.Repositories
             ctx.SaveChanges();
         }
 
+        /// <summary>
+        /// dele um equipamento existente e salva no banco
+        /// </summary>
+        /// <param name="id"> id do equipamento que será deletado </param>
         public void Deletar(int id)
         {
             ctx.Remove(BuscarPorId(id));
@@ -91,6 +104,10 @@ namespace Projeto.Incial.Repositories
             ctx.SaveChanges();
         }
 
+        /// <summary>
+        /// lista todos os equipamentos existentes
+        /// </summary>
+        /// <returns> uma lista de equipamentos </returns>
         public List<Equipamento> Listar()
         {
             return ctx.Equipamentos.ToList();

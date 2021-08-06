@@ -7534,19 +7534,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JoViO\\.nuget\\packages\\": {}
+    "C:\\Users\\50359605877\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JoViO\\OneDrive\\Documentos\\GitHub\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj",
+      "projectUniqueName": "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj",
       "projectName": "Projeto.Incial",
-      "projectPath": "C:\\Users\\JoViO\\OneDrive\\Documentos\\GitHub\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj",
-      "packagesPath": "C:\\Users\\JoViO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JoViO\\OneDrive\\Documentos\\GitHub\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\obj\\",
+      "projectPath": "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\Projeto.Incial.csproj",
+      "packagesPath": "C:\\Users\\50359605877\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\50359605877\\Desktop\\PrimeiroProjeto3DM\\Back-End\\Projeto.Incial\\Projeto.Inicial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JoViO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\50359605877\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7621,7 +7621,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

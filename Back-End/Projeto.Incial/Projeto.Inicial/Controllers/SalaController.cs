@@ -18,7 +18,7 @@ namespace Projeto.Incial.Controllers
 
         private ISalaRepository _salaRepository { get; set; }
 
-        public SalasController()
+        public SalaController()
         {
             _salaRepository = new SalaRepository();
         }
@@ -44,7 +44,7 @@ namespace Projeto.Incial.Controllers
             {
                 _salaRepository.Cadastrar(novaSala);
 
-                return StatusCode(200);
+                return StatusCode(201);
             }
 
             catch (Exception ex)
@@ -60,7 +60,7 @@ namespace Projeto.Incial.Controllers
             {
                 _salaRepository.Atualizar(id, SalaAtualizada);
 
-                return StatusCode(200);
+                return StatusCode(204);
             }
 
             catch (Exception erro)
@@ -76,7 +76,7 @@ namespace Projeto.Incial.Controllers
             {
                 _salaRepository.Deletar(id);
 
-                return StatusCode(201);
+                return StatusCode(204);
             }
             catch (Exception erro)
             {

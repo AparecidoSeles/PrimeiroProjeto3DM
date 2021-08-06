@@ -43,7 +43,7 @@ namespace Projeto.Incial.Controllers
             {
                 _equipamentoRepository.Cadastrar(novoEquipamento);
 
-                return StatusCode(200);
+                return StatusCode(201);
             }
 
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace Projeto.Incial.Controllers
             {
                 _equipamentoRepository.Atualizar(id, tipoEquipamentoAtualizado);
 
-                return StatusCode(200);
+                return StatusCode(204);
             }
 
             catch (Exception erro)
@@ -75,7 +75,7 @@ namespace Projeto.Incial.Controllers
             {
                 _equipamentoRepository.Deletar(id);
 
-                return StatusCode(201);
+                return StatusCode(204);
             }
             catch (Exception erro)
             {

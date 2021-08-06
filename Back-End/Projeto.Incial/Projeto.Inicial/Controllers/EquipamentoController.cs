@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using projeto.inicial.webApi.Interfaces;
+using Projeto.Incial.Repositories;
+using Projeto.Inicial.Domains;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +43,7 @@ namespace Projeto.Incial.Controllers
             {
                 _equipamentoRepository.Cadastrar(novoEquipamento);
 
-                return StatusCode(200);
+                return StatusCode(201);
             }
 
             catch (Exception ex)
@@ -56,7 +59,7 @@ namespace Projeto.Incial.Controllers
             {
                 _equipamentoRepository.Atualizar(id, EquipamentoAtualizado);
 
-                return StatusCode(200);
+                return StatusCode(204);
             }
 
             catch (Exception erro)
@@ -72,7 +75,7 @@ namespace Projeto.Incial.Controllers
             {
                 _equipamentoRepository.Deletar(id);
 
-                return StatusCode(201);
+                return StatusCode(204);
             }
             catch (Exception erro)
             {

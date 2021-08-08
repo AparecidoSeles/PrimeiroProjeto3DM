@@ -1,4 +1,3 @@
-import axios from "axios";
 import { React, Component } from "react";
 import api from "../../services/api";
 import '../../assets/css/login/Login.css';
@@ -13,14 +12,14 @@ class Login extends Component {
             senha : '',
             email: '',
             error: '',
-            isLoading: false
+            isLoading: false,
         };
     };
 
     logar = (event) =>{
         event.preventDefault()
         this.setState({error: '', isLoading: true});
-        axios.post(api+'', {
+        api.post('/login', {
             email: this.state.email,
             senha: this.state.senha
         })
@@ -35,9 +34,10 @@ class Login extends Component {
         })
     }
 
+
     updateStateInput = (campo) =>{
         this.setState({[campo.target.name]: campo.target.value})
-        console.log(campo.target.value)
+        console.log(campo.target.name)
     }
 
     render() {

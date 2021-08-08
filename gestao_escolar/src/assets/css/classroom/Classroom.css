@@ -72,6 +72,11 @@
     font:var(--font-title);
 }
 
+.class-section span{
+    font: var(--font-regular);
+    color: green;
+}
+
 .class-form{
     width: 500px;
     height: 430px;

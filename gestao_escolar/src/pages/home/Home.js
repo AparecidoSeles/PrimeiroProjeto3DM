@@ -2,6 +2,7 @@ import '../../assets/css/home/Home.css';
 
 import { Component } from "react";
 import Header from '../../components/header/Header';
+import api from '../../services/api';
 
 class Home extends Component {
     constructor(props) {
@@ -14,12 +15,35 @@ class Home extends Component {
         }
     }
 
+    buscarSalas = async () => {
+        const resposta = await api.get('/Sala', {
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('user-token')
+            }
+        })
+        this.setState({listaSalas: resposta.data})
+    };
+
+    buscarEquipamentos = async () => {
+        const resposta = await api.get('/Equipamento', {
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('user-token')
+            }
+        })
+        this.setState({listaEquipamentos: resposta.data})
+    };
+
+    componentDidMount() {
+        this.buscarSalas();
+        this.buscarEquipamentos();
+    }
+
 
     render() {
         return (
             <div className='home-body'>
                 <div className='home-content'>
-                    <Header/>
+                    <Header />
                     <main className='home-main'>
                         <div className='home-text'>
                             <h1>Visão geral</h1>

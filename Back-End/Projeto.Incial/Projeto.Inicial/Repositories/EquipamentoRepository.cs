@@ -1,4 +1,5 @@
-﻿using projeto.inicial.webApi.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using projeto.inicial.webApi.Interfaces;
 using Projeto.Inicial.Contexts;
 using Projeto.Inicial.Domains;
 using System;
@@ -110,7 +111,33 @@ namespace Projeto.Incial.Repositories
         /// <returns> uma lista de equipamentos </returns>
         public List<Equipamento> Listar()
         {
-            return ctx.Equipamentos.ToList();
+            return ctx.Equipamentos
+                .Include(e => e.IdTipoEquipamentoNavigation)
+                .Include(e => e.IdSalaNavigation)
+                .Select(e => new Equipamento()
+                {
+                    IdEquipamento = e.IdEquipamento,
+                    IdTipoEquipamento = e.IdTipoEquipamento,
+                    IdSala = e.IdSala,
+                    Nome = e.Nome,
+                    Marca = e.Marca,
+                    NumeroSerie = e.NumeroSerie,
+                    NumeroPatrimonio = e.NumeroPatrimonio,
+                    Descricao = e.Descricao,
+                    Situacao = e.Situacao,
+                    IdTipoEquipamentoNavigation = new TipoEquipamento()
+                    {
+                        IdTipoEquipamento = e.IdTipoEquipamentoNavigation.IdTipoEquipamento,
+                        NomeTipoEquipamento = e.IdTipoEquipamentoNavigation.NomeTipoEquipamento
+                    },
+                    IdSalaNavigation = new Sala()
+                    {
+                        Nome = e.IdSalaNavigation.Nome,
+                        IdSala = e.IdSalaNavigation.IdSala
+                    }
+                    
+                })
+                .ToList();
         }
     }
 }

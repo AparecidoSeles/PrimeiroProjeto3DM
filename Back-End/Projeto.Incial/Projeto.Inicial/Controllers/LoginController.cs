@@ -15,7 +15,6 @@ using System.Threading.Tasks;
 
 namespace Projeto.Incial.Controllers
 {
-    [Authorize]
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]

@@ -39,7 +39,7 @@ class Classroom extends Component {
             idSalaAlterado: sala.idSala,
             name: sala.nome,
             floor: sala.andar,
-            metragem: sala.metragem,
+            m2: sala.metragem,
         })
     }
 
@@ -64,8 +64,7 @@ class Classroom extends Component {
             })
                 .then(resposta => {
                     if (resposta.status === 204) {
-                        this.setState({ mensagem: 'Sala atualizada!' })
-                        this.setState({ isLoading: false })
+                        this.setState({ mensagem: 'Sala atualizada!', isLoading: false  })
                     }
                 })
                 .then(this.buscarSalas)
@@ -81,8 +80,7 @@ class Classroom extends Component {
             })
                 .then(resposta => {
                     if (resposta.status === 201) {
-                        this.setState({ mensagem: 'Sala cadastrada!' })
-                        this.setState({ isLoading: false })
+                        this.setState({ mensagem: 'Sala cadastrada!', isLoading: false })
                     }
                 })
                 .then(this.buscarSalas)
